@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #f3e5f5
+        );
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+
+    color: #263238;
+}
+
+
+.container {
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.logo {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.header h1 {
+
+    font-size: 38px;
+
+    color: #1565c0;
+
+    margin-bottom: 10px;
+}
+
+
+.header p {
+
+    color: #607d8b;
+
+    font-size: 17px;
+}
+
+
+/* CARD */
+
+.card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.08);
+}
+
+
+.card h2 {
+
+    margin-bottom: 20px;
+
+    color: #1565c0;
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+input[type="text"] {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.instruction {
+
+    color: #78909c;
+
+    margin-bottom: 20px;
+}
+
+
+/* QUESTIONS */
+
+.question {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    background: #f8faff;
+
+    border-radius: 12px;
+}
+
+
+.question span {
+
+    flex: 1;
+
+    font-weight: bold;
+}
+
+
+.question label {
+
+    margin: 0;
+
+    font-weight: normal;
+}
+
+
+.question input {
+
+    margin-right: 5px;
+}
+
+
+/* BUTTON */
+
+button,
+.button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #1565c0;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    margin-top: 20px;
+}
+
+
+button:hover,
+.button:hover {
+
+    background: #0d47a1;
+}
+
+
+/* RESULT */
+
+.result-card {
+
+    background: white;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.08);
+
+    margin-bottom: 20px;
+}
+
+
+.diagnosis-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.diagnosis {
+
+    color: #1565c0;
+
+    margin-top: 12px;
+}
+
+
+/* RESULT GRID */
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.stat-card {
+
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.07);
+}
+
+
+.stat-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+.stat-card h3 {
+
+    margin-bottom: 15px;
+}
+
+
+/* PROGRESS */
+
+.progress {
+
+    height: 10px;
+
+    background: #e0e0e0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+}
+
+
+.progress-bar {
+
+    height: 100%;
+
+    background: #1565c0;
+}
+
+
+/* RISK */
+
+.risk {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+}
+
+
+.low {
+
+    color: #2e7d32;
+}
+
+
+.medium {
+
+    color: #f57c00;
+}
+
+
+.high {
+
+    color: #c62828;
+}
+
+
+/* RECOMMENDATION */
+
+.recommendation {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.07);
+}
+
+
+.recommendation h2 {
+
+    color: #1565c0;
+
+    margin-bottom: 12px;
+}
+
+
+.recommendation p {
+
+    line-height: 1.7;
+}
+
+
+/* WARNING */
+
+.warning {
+
+    background: #ffebee;
+
+    color: #b71c1c;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+.footer {
+
+    text-align: center;
+
+    color: #78909c;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .header h1 {
+
+        font-size: 30px;
+    }
+
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .question {
+
+        flex-wrap: wrap;
+    }
+
+
+    .question span {
+
+        flex-basis: 100%;
+    }
+
+}

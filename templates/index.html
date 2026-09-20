@@ -1,0 +1,255 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Health Diagnosis</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <div class="logo">🩺</div>
+
+        <h1>AI Health Diagnosis</h1>
+
+        <p>
+            Intelligent Expert System for Preliminary
+            Symptom Analysis
+        </p>
+
+    </div>
+
+
+    <!-- FORM -->
+    <form action="{{ url_for('diagnose') }}" method="POST">
+
+
+        <!-- PATIENT INFORMATION -->
+        <div class="card">
+
+            <h2>👤 Patient Information</h2>
+
+            <label for="name">Your Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+        </div>
+
+
+        <!-- SYMPTOMS -->
+        <div class="card">
+
+            <h2>🩺 Symptoms</h2>
+
+            <p class="instruction">
+                Please answer all questions with Yes or No.
+            </p>
+
+
+            <!-- FEVER -->
+            <div class="question">
+
+                <span>Do you have fever?</span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="fever"
+                        value="yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="fever"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- COUGH -->
+            <div class="question">
+
+                <span>Do you have cough?</span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="cough"
+                        value="yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="cough"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- BODY PAIN -->
+            <div class="question">
+
+                <span>Do you have body pain?</span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="body_pain"
+                        value="yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="body_pain"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- HEADACHE -->
+            <div class="question">
+
+                <span>Do you have headache?</span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="headache"
+                        value="yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="headache"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- SORE THROAT -->
+            <div class="question">
+
+                <span>Do you have sore throat?</span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="sore_throat"
+                        value="yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="sore_throat"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- FATIGUE -->
+            <div class="question">
+
+                <span>Do you feel tired or fatigued?</span>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="fatigue"
+                        value="yes"
+                        required
+                    >
+                    Yes
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="fatigue"
+                        value="no"
+                    >
+                    No
+                </label>
+
+            </div>
+
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit">
+                🤖 Analyze Symptoms
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+        ⚠️ This system is developed for educational purposes.
+        It does not replace professional medical diagnosis.
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
+```

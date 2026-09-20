@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Diagnosis Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div class="logo">🤖</div>
+
+        <h1>AI Analysis Result</h1>
+
+        <p>
+            Hello {{ name }}, here is your analysis
+        </p>
+
+    </div>
+
+
+    <div class="result-card">
+
+        <div class="diagnosis-icon">
+            🩺
+        </div>
+
+        <h2>Possible Diagnosis</h2>
+
+        <h1 class="diagnosis">
+            {{ diagnosis }}
+        </h1>
+
+    </div>
+
+
+    <div class="result-grid">
+
+        <!-- Confidence -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🎯
+            </div>
+
+            <h3>Confidence</h3>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    style="width: {{ confidence }}%">
+                </div>
+
+            </div>
+
+            <strong>
+                {{ confidence }}%
+            </strong>
+
+        </div>
+
+
+        <!-- Risk -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📊
+            </div>
+
+            <h3>Risk Level</h3>
+
+            <div class="risk {{ risk|lower }}">
+
+                {{ risk }}
+
+            </div>
+
+        </div>
+
+
+        <!-- Score -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📈
+            </div>
+
+            <h3>Risk Score</h3>
+
+            <h2>
+                {{ score }}/7
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="recommendation">
+
+        <h2>💡 AI Recommendation</h2>
+
+        <p>
+            {{ recommendation }}
+        </p>
+
+    </div>
+
+
+    {% if risk == "HIGH" %}
+
+    <div class="warning">
+
+        🚨 <strong>Important:</strong>
+
+        Your symptoms indicate a higher risk.
+        Please consult a qualified healthcare professional.
+
+    </div>
+
+    {% endif %}
+
+
+    <div class="actions">
+
+        <a href="/" class="button">
+            🔄 Check Again
+        </a>
+
+    </div>
+
+
+    <div class="footer">
+
+        ⚠️ This result is for educational purposes only
+        and should not be considered a medical diagnosis.
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
